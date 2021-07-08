@@ -4,6 +4,11 @@ import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 
+import java.awt.*;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+
 /**
  * Das ist die Controller-Klasse des Hauptmenüs, also von mainMenu.fxml
  *
@@ -110,7 +115,13 @@ public class MainMenuController {
      */
     @FXML
     void logoItemOnMouseClicked(MouseEvent event) {
-
+        // Öffnen der GitHub Website im Standardbrowser.
+        Desktop dt = Desktop.getDesktop();
+        try {
+            dt.browse(new URI("https://github.com/sauermartin02/Readtastic"));
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
 
 }
