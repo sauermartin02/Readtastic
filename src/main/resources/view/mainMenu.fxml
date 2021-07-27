@@ -9,10 +9,10 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="960.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="readtastic.controller.MainMenuController">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="960.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="readtastic.controller.MainMenuController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="500.0" />
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
   <rowConstraints>
@@ -23,7 +23,7 @@
    <children>
       <ImageView fitHeight="250.0" fitWidth="250.0" onMouseClicked="#logoItemOnMouseClicked" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
          <image>
-            <Image url="@../icon/readtasticIcon_v1_1000x1000.png" />
+            <Image url="@../other/icon/readtasticIcon_v1_1000x1000.png" />
          </image>
          <cursor>
             <Cursor fx:constant="HAND" />
@@ -39,49 +39,33 @@
             <Font size="30.0" />
          </font>
       </Text>
-      <ImageView fitHeight="480.0" fitWidth="290.0" onMouseClicked="#editItemOnMouseClicked" onMouseEntered="#editItemOnMouseEntered" onMouseExited="#editItemOnMouseExited" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+      <ImageView fitHeight="480.0" fitWidth="290.0" onMouseClicked="#helpItemOnMouseClicked" onMouseEntered="#helpItemOnMouseEntered" onMouseExited="#helpItemOnMouseExited" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
          <image>
-            <Image url="@../uiElements/mainMenu/uiElement_Bearbeiten@2x.png" />
+            <Image url="@../other/uiElements/mainMenu/uiElement_Hilfe@2x.png" />
          </image>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
-      <ImageView fitHeight="480.0" fitWidth="290.0" onMouseClicked="#helpItemOnMouseClicked" onMouseEntered="#helpItemOnMouseEntered" onMouseExited="#helpItemOnMouseExited" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+      <ImageView fitHeight="480.0" fitWidth="290.0" onMouseClicked="#readItemOnMouseClicked" onMouseEntered="#readItemOnMouseEntered" onMouseExited="#readItemOnMouseExited" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP">
          <image>
-            <Image url="@../uiElements/mainMenu/uiElement_Hilfe@2x.png" />
+            <Image url="@../other/uiElements/mainMenu/uiElement_Lesen@2x.png" />
          </image>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
-      <ImageView fitHeight="480.0" fitWidth="290.0" onMouseClicked="#readItemOnMouseClicked" onMouseEntered="#readItemOnMouseEntered" onMouseExited="#readItemOnMouseExited" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+      <ImageView fx:id="readDotHover" fitHeight="480.0" fitWidth="290.0" preserveRatio="true" visible="false" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
          <image>
-            <Image url="@../uiElements/mainMenu/uiElement_Lesen@2x.png" />
+            <Image url="@../other/uiElements/mainMenu/uiElement_Punkt_hover@2x.png" />
          </image>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
-      <ImageView fx:id="readDotHover" fitHeight="480.0" fitWidth="290.0" preserveRatio="true" visible="false" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+      <ImageView fx:id="helpDotHover" fitHeight="480.0" fitWidth="290.0" preserveRatio="true" visible="false" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
          <image>
-            <Image url="@../uiElements/mainMenu/uiElement_Punkt_hover@2x.png" />
-         </image>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </ImageView>
-      <ImageView fx:id="editDotHover" fitHeight="480.0" fitWidth="290.0" preserveRatio="true" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
-         <image>
-            <Image url="@../uiElements/mainMenu/uiElement_Punkt_hover@2x.png" />
-         </image>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </ImageView>
-      <ImageView fx:id="helpDotHover" fitHeight="480.0" fitWidth="290.0" preserveRatio="true" visible="false" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
-         <image>
-            <Image url="@../uiElements/mainMenu/uiElement_Punkt_hover@2x.png" />
+            <Image url="@../other/uiElements/mainMenu/uiElement_Punkt_hover@2x.png" />
          </image>
          <cursor>
             <Cursor fx:constant="HAND" />
