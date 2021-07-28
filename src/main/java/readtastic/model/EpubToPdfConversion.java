@@ -45,15 +45,15 @@ public class EpubToPdfConversion extends Thread {
                     // funktioniert haben.
 
                     String fileNameWithoutExtension = FilenameUtils.removeExtension(file.getName());
-                    String currentDir = System.getProperty("user.dir") + "\\docs";
+                    String docsDir = System.getProperty("user.dir") + "\\docs";
                     // Kommando, dass mittels Powershell ausgeführt werden soll
                     String command = "powershell.exe cd " +
-                            currentDir + " ; " +
+                            docsDir + " ; " +
                             "..\\ebook-convert\\ebook-convert.exe '.\\" +
                             fileNameWithoutExtension + ".epub' " +
                             "'" + fileNameWithoutExtension + ".pdf'";
 
-                    // Führe Kommando aus
+                    // Führe Kommando über Powershell aus
                     // Ruft "ebook-convert" auf, welches spezifizierte .epub-Datei ind .pdf-Datei umwandelt und diese
                     // im docs-Ordner speichert
                     try {

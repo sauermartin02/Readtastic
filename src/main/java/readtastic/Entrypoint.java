@@ -13,6 +13,8 @@ import readtastic.model.EpubToPdfConversion;
  *
  * Sie baut das Fenster auf und führt in die Anwendung hinein, indem sie die fxml-Datei des Hauptmenüs lädt und
  * dieses dann anzeigt.
+ * Anfangs wird noch in einem neuen Thread die Konvertierung aller .epub-Dateien im "docs"-Ordner zu .pdf-Dateien
+ * gestartet.
  *
  * @author Martin Sauer
  */
