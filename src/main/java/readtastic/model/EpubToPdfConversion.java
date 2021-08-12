@@ -7,7 +7,8 @@ import java.io.File;
 /**
  *  Instanzen dieser Klasse werden als Threads ausgeführt.
  *  Diese greifen auf den docs-Ordner zu und wandeln alle .epub-Dateien in .pdf-Dateien um, falls noch keine zugehörige
- *  .pdf-Datei vorhanden ist.
+ *  .pdf-Datei (gleicher Name) vorhanden ist.
+ *
  *  Interagiert dabei mit der documents-ArrayList.
  *
  * @author Martin Sauer
@@ -20,9 +21,9 @@ public class EpubToPdfConversion extends Thread {
         File dir = new File("./docs");
 
         // Konvertiere alle .epub Dateien zu .pdf Dateien, falls noch nicht vorhanden.
-        // Notwendig, da im Prinzip nur .pdf-Dateien verarbeitet werden, aber .epub mit unterstützt werden muss.
+        // Notwendig, da im Prinzip nur .pdf-Dateien verarbeitet werden, aber .epub mit unterstützt werden soll.
         // Konvertierung einfacher, als direkt .epub Dateien zu verarbeiten.
-        // -----
+
         // Iteration über alle Dokumente im docs-Ordner.
         for (File file : dir.listFiles()) {
             // Berücksichtige nur .epub-Dateien.
@@ -40,11 +41,10 @@ public class EpubToPdfConversion extends Thread {
                 if ( ! existsAsPdf) {
                     // Wandle .epub zu .pdf um.
                     // Dies geschieht über die Kommandozeile mittels des mitgelieferten Teilprogramms von Calibre "ebook-convert".
-                    // -----
-                    // Notwendig, da manuelle Umwandlung zu umständlich wäre und gefundene Bibliotheken nicht wie gewollt
-                    // funktioniert haben.
 
+                    // Name des Dokuments ohne Endung
                     String fileNameWithoutExtension = FilenameUtils.removeExtension(file.getName());
+                    // Pfad zum docs-Verzeichnis
                     String docsDir = System.getProperty("user.dir") + "\\docs";
                     // Kommando, dass mittels Powershell ausgeführt werden soll
                     String command = "powershell.exe cd " +
@@ -54,8 +54,7 @@ public class EpubToPdfConversion extends Thread {
                             "'" + fileNameWithoutExtension + ".pdf'";
 
                     // Führe Kommando über Powershell aus
-                    // Ruft "ebook-convert" auf, welches spezifizierte .epub-Datei ind .pdf-Datei umwandelt und diese
-                    // im docs-Ordner speichert
+                    // Ruft "ebook-convert" auf, welches spezifizierte .epub-Datei ind .pdf-Datei umwandelt und diese im docs-Ordner speichert
                     try {
                         Runtime.getRuntime().exec(command);
                     } catch (Exception ex) {

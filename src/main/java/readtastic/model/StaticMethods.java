@@ -18,8 +18,10 @@ public class StaticMethods {
     /**
      * Diese Methode greift auf den "docs"-Ordner zu, welcher sich im gleichen Verzeichnis, wie die ausgeführte .jar-Datei,
      * befindet.
+     *
      * In diesem Ordner sollen nur vom Nutzer importierte Dokumente (.pdf oder .epub) sein.
      * Jegliche andere Dokumente, z.B. .txt o.ä. werden nicht berücksichtigt.
+     *
      * Es wird für jede .pdf-Datei ein "Ebook"-Objekt erstellt, welche in einer zugehörigen öffentlichen Datenstruktur "documents"
      * gespeichert werden.
      */
@@ -48,13 +50,14 @@ public class StaticMethods {
                 // Cover (1. Seite) des Dokuments als JavaFX Image festlegen
                 Image cover = null;
                 try {
+                    // pageIndex 0 = Seite Nummer 1
                     cover = SwingFXUtils.toFXImage(new PDFRenderer(pages).renderImage(0), null);
                 } catch (Exception ex) {
                     ex.printStackTrace();
                 }
 
                 // Anlegen von Ebook-Objekt
-                Ebook ebook = new Ebook(title, numberOfPages, pages, cover);
+                Ebook ebook = new Ebook(title, numberOfPages, pages, cover, 0);
 
                 // Hinzufügen dieses Ebook-Objekts zu interner Datenstruktur "documents", wenn noch nicht vorhanden
                 // Sinnvoll, da es sonst zu Duplikaten bei Szenenwechsel kommen kann
@@ -70,13 +73,6 @@ public class StaticMethods {
                 // Füge Ebook hinzu, wenn noch kein Ebook mit gleichem Titel existiert
                 if ( ! isAdded) {
                     Data.documents.add(ebook);
-                }
-
-                // Schließen von PDDocument-Objekt, nachdem es nicht mehr gebraucht wird
-                try {
-                    pages.close();
-                } catch (Exception ex) {
-                    ex.printStackTrace();
                 }
             }
         }

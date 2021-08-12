@@ -11,6 +11,7 @@ package readtastic;
 public class Starter {
 
     public static void main(String[] args) {
+        // Rufe Main-Methode der Entrypoint-Klasse auf
         Entrypoint.main(args);
     }
 

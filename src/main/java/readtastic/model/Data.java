@@ -12,4 +12,7 @@ public class Data {
     // Datenstruktur zum Verwalten erstellter Ebook-Objekte
     public static ArrayList<Ebook> documents = new ArrayList<Ebook>();
 
+    // Öffentlich zugängliche Variable, in welcher der Index des gerade geöffneten Ebooks gespeichert wird
+    public static int currentEbookIndex;
+
 }

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1010.0" prefWidth="1440.0" style="-fx-background-color: E0E0E0;" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="readtastic.controller.ReaderController">
+   <children>
+      <ImageView fitHeight="40.0" fitWidth="160.0" layoutX="-10.0" onMouseClicked="#backButtonOnMouseClicked">
+         <image>
+            <Image url="@../other/uiElements/reader/zurückButton@2x.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="262.0" layoutY="455.0" onMouseClicked="#turnPageBackwardsOnMouseClicked">
+         <image>
+            <Image url="@../other/uiElements/reader/Zurückblättern@2x.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="1078.0" layoutY="455.0" onMouseClicked="#turnPageForwardOnMouseClicked">
+         <image>
+            <Image url="@../other/uiElements/reader/Vorblättern@2x.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="1090.0" text="Seite">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="currentPageNumberTextField" focusTraversable="false" layoutX="1138.0" layoutY="3.0" onKeyPressed="#currentPageNumberTextFieldOnKeyPressed" prefHeight="25.0" prefWidth="55.0" />
+      <Label layoutX="1199.0" text="von">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalPageNumberLabel" layoutX="1237.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="currentPageImageView" fitHeight="1010.0" fitWidth="714.0" pickOnBounds="true" x="363.0" />
+   </children>
+</Pane>

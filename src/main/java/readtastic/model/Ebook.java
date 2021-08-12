@@ -5,6 +5,7 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 
 /**
  * Dies ist die Ebook-Klasse.
+ *
  * Ein Ebook-Objekt wird aus einer .pdf-Datei erstellt und wird innerhalb der Anwendung zum Anzeigen von Seiten/Covern
  * und zur Verwaltung genutzt.
  *
@@ -26,6 +27,9 @@ public class Ebook {
     // Wird zur Anzeige im Bücherregal genutzt
     private Image cover;
 
+    // Zuletzt geöffnete Seite in derzeitiger Session
+    private int lastOpenedPage;
+
 
     /**
      * Konstruktor für Ebook-Objekte.
@@ -34,12 +38,14 @@ public class Ebook {
      * @param numberOfPages     Seitenanzahl
      * @param pages             Inhalt als Seiten
      * @param cover             Cover als Image
+     * @param lastOpenedPage    Seitenzahl der zuletzt geöffneten Seite in derzeitiger Session
      */
-    public Ebook(String title, int numberOfPages, PDDocument pages, Image cover) {
+    public Ebook(String title, int numberOfPages, PDDocument pages, Image cover, int lastOpenedPage) {
         this.title = title;
         this.numberOfPages = numberOfPages;
         this.pages = pages;
         this.cover = cover;
+        this.lastOpenedPage = lastOpenedPage;
     }
 
     /**
@@ -76,5 +82,25 @@ public class Ebook {
      */
     public Image getCover() {
         return cover;
+    }
+
+    /**
+     * Gibt Seitenzahl der zuletzt geöffneten Seite des Ebooks in derzeitiger Session zurück.
+     * Mit 0 beginnend. Daher Anzeige mit +1 im Reader!
+     *
+     * @return
+     */
+    public int getLastOpenedPage() {
+        return lastOpenedPage;
+    }
+
+    /**
+     * Setzt die Zahl der zuletzt geöffneten Seite des Ebooks in derzeitiger Session.
+     * Index beachten.
+     *
+     * @param lastOpenedPage
+     */
+    public void setLastOpenedPage(int lastOpenedPage) {
+        this.lastOpenedPage = lastOpenedPage;
     }
 }

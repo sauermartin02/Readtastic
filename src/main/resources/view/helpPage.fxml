@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="960.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="readtastic.controller.HelpPageController">
+   <content>
+      <Pane prefHeight="2730.0" prefWidth="1425.0">
+         <children>
+            <Label layoutX="30.0" layoutY="60.0" prefHeight="30.0" prefWidth="1447.0" text="Hier werden alle Funktionen von Readtastic in einer übersichtlichen Anleitung dargestellt.">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="110.0" text="Nach Start der Anwendung sehen Sie das Hauptmenü:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="652.0" fitWidth="812.0" layoutX="342.0" layoutY="168.0" preserveRatio="true">
+               <image>
+                  <Image url="@../other/helpWindow/MainMenuScreenshot.PNG" />
+               </image>
+            </ImageView>
+            <Label layoutX="834.0" layoutY="256.0" text="1" textFill="RED">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="839.0" layoutY="482.0" text="2" textFill="RED">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="839.0" layoutY="622.0" text="3" textFill="RED">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="421.0" layoutY="550.0" text="4" textFill="RED">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="1058.0" layoutY="550.0" text="5" textFill="RED">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="760.0" text="Dort gibt es verschiedene Nutzungsmöglichkeiten, welche mit roten Ziffern nummeriert sind.">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="785.0" text="Klicken Sie dazu einfach auf das entsprechende Bedienelement.">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="830.0" text="1:" underline="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="830.0" prefHeight="30.0" prefWidth="1072.0" text="Hier ist das Logo von Readtastic zu sehen.">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="855.0" prefHeight="30.0" prefWidth="1072.0" text="Durch einen Klick auf das Logo wird in Ihrem Internetbrowser die zugehörige GitHub-Seite zu Readtastic geöffnet.">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="880.0" prefHeight="30.0" prefWidth="1072.0" text="Auf Dieser können Sie den Quellcode einsehen oder die Anwendung herunterladen.">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="160.0" layoutX="-10.0" onMouseClicked="#backButtonOnMouseClicked">
+               <image>
+                  <Image url="@../other/helpWindow/zurückButton@2x.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="30.0" layoutY="932.0" text="2:" underline="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="932.0" prefHeight="30.0" prefWidth="1072.0" text="Hier ist der Hinzufügen-Button zu sehen.">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="957.0" prefHeight="30.0" prefWidth="1072.0" text="Durch einen Klick auf Ihn öffnet sich ein Fenster zur Auswahl einer Datei.">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="982.0" prefHeight="30.0" prefWidth="1072.0" text="Wählen Sie hier ihre PDF- oder EPUB-Dateien aus, welche Sie mit Readtastic lesen möchten.">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="1007.0" prefHeight="30.0" prefWidth="1072.0" text="Diese werden dann im Hintergrund in den docs-Ordner kopiert, welcher sich im Verzeichnis von Readtastic befindet.">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="1040.0" prefHeight="30.0" prefWidth="1072.0" text="Alternativ können Sie ihre zu lesenden Dokumente (PDF oder EPUB) auch direkt in den docs-Ordner kopieren.">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="1091.0" text="3:" underline="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="1091.0" prefHeight="30.0" prefWidth="1072.0" text="Hier ist der Konvertieren-Button zu sehen.">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="1116.0" prefHeight="30.0" prefWidth="1195.0" text="Readtastic benutzt intern nur PDF-Dokumente, was bedeutet, dass Ihre importierten EPUB-Dokumente umgewandelt werden müssen.">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="1141.0" prefHeight="30.0" prefWidth="1072.0" text="Durch einen Klick wird ein Hintergrundprozess gestartet, welcher die EPUB-Dokumente in PDF-Dokumente umwandelt.">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="1166.0" prefHeight="30.0" prefWidth="1195.0" text="Warten Sie nun einen Augenblick und prüfen Sie ggf., dass ihre EPUB-Dokumente im docs-Ordner umgewandelt wurden.">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="1212.0" text="4:" underline="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="1212.0" prefHeight="30.0" prefWidth="1072.0" text="Hier ist der Lesen-Button zu sehen.">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="1237.0" prefHeight="30.0" prefWidth="1195.0" text="Klicken Sie auf ihn, um zum Bücherregal zu gelangen:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="652.0" fitWidth="812.0" layoutX="342.0" layoutY="1283.0" preserveRatio="true">
+               <image>
+                  <Image url="@../other/helpWindow/bookshelfScreenshot.PNG" />
+               </image>
+            </ImageView>
+            <Label layoutX="63.0" layoutY="1857.0" prefHeight="30.0" prefWidth="1195.0" text="Hier werden nun alle Ihre importierten Dokumente angezeigt. Klicken Sie auf Eines, um es zu lesen.">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="1883.0" prefHeight="30.0" prefWidth="1195.0" text="Es öffnet sich der Reader mit Ihrem ausgewählten Dokument:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="652.0" fitWidth="812.0" layoutX="342.0" layoutY="1929.0" preserveRatio="true">
+               <image>
+                  <Image url="@../other/helpWindow/readerScreenshot.PNG" />
+               </image>
+            </ImageView>
+            <Label layoutX="63.0" layoutY="2542.0" prefHeight="30.0" prefWidth="1195.0" text="Nutzen Sie die Pfeiltasten, um vor- und zurückzublättern.">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="2567.0" prefHeight="30.0" prefWidth="1195.0" text="Oben rechts sehen Sie auch Ihre aktuelle Seite und die Gesamtzahl der Seiten des Dokumentes.">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="2593.0" prefHeight="30.0" prefWidth="1195.0" text="Hier können Sie auch direkt eine Zahl eingeben, um zu einer beliebigen Seite zu springen.">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="2637.0" text="5:" underline="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="2637.0" prefHeight="30.0" prefWidth="1072.0" text="Hier ist der Hilfe-Button zu sehen.">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="2662.0" prefHeight="30.0" prefWidth="1195.0" text="Durch einen Klick auf Diesen kommen Sie zum Hilfe-Menü, in welchem Sie gerade sind.">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </content>
+</ScrollPane>
