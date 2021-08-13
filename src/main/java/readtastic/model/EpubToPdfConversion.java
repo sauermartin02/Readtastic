@@ -3,7 +3,6 @@ package readtastic.model;
 import org.apache.commons.io.FilenameUtils;
 
 import java.io.File;
-
 /**
  *  Instanzen dieser Klasse werden als Threads ausgeführt.
  *  Diese greifen auf den docs-Ordner zu und wandeln alle .epub-Dateien in .pdf-Dateien um, falls noch keine zugehörige

@@ -88,7 +88,7 @@ public class Ebook {
      * Gibt Seitenzahl der zuletzt geöffneten Seite des Ebooks in derzeitiger Session zurück.
      * Mit 0 beginnend. Daher Anzeige mit +1 im Reader!
      *
-     * @return
+     * @return lastOpenedPage
      */
     public int getLastOpenedPage() {
         return lastOpenedPage;
@@ -98,7 +98,7 @@ public class Ebook {
      * Setzt die Zahl der zuletzt geöffneten Seite des Ebooks in derzeitiger Session.
      * Index beachten.
      *
-     * @param lastOpenedPage
+     * @param lastOpenedPage Nummer der letzten geöffneten Seite
      */
     public void setLastOpenedPage(int lastOpenedPage) {
         this.lastOpenedPage = lastOpenedPage;

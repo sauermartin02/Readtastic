@@ -150,7 +150,7 @@ public class MainMenuController {
      */
     @FXML
     void convertItemOnMouseClicked(MouseEvent event) {
-        // Thread für Konvertierung von .epub nach .pdf starten
+        // Epubs konvertieren
         EpubToPdfConversion epubToPdfConversion = new EpubToPdfConversion();
         epubToPdfConversion.start();
 
