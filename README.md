@@ -7,6 +7,8 @@ Readtastic ist ein kleiner, simpler E-Book-Reader, welcher in Java / JavaFX im R
 Readtastic funktioniert nur unter Windows 10 (neuere Versionen nicht getestet).
 Zur Nutzung kann man einfach Readtastic.jar herunterladen und ausführen.
 
+**java -jar Readtastic.jar**
+
 Im Programm selber ist ein Anleitung zur Nutzung enthalten.
 
 Prinzipiell lassen sich .pdf und .epub Dokumente über die grafische Oberfläche importieren.
