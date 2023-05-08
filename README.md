@@ -8,3 +8,6 @@ Readtastic funktioniert nur unter Windows 10 (neuere Versionen nicht getestet).
 Zur Nutzung kann man einfach Readtastic.jar herunterladen und ausführen.
 
 Im Programm selber ist ein Anleitung zur Nutzung enthalten.
+
+Prinzipiell lassen sich .pdf und .epub Dokumente über die grafische Oberfläche importieren.
+Diese werden dann in einer Art Bücherregal angezeigt und man kann sie öffnen und lesen.
