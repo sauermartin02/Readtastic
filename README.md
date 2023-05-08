@@ -14,4 +14,8 @@ Im Programm selber ist ein Anleitung zur Nutzung enthalten.
 Prinzipiell lassen sich .pdf und .epub Dokumente über die grafische Oberfläche importieren.
 Diese werden dann in einer Art Bücherregal angezeigt und man kann sie öffnen und lesen.
 
-![alt text](./src/main/resources/other/helpWindow/bookshelfScreenshot.PNG "Title")
+![alt text](./src/main/resources/other/helpWindow/MainMenuScreenshot.PNG "Hauptmenü")
+
+![alt text](./src/main/resources/other/helpWindow/bookshelfScreenshot.PNG "Bücherregal")
+
+![alt text](./src/main/resources/other/helpWindow/readerScreenshot.PNG "E-Reader")
